@@ -66,6 +66,21 @@ registerExportTools(server, client);
 // ─────────────────────────────────────────────
 
 async function main(): Promise<void> {
+  const mode = process.env.MCP_TRANSPORT ?? "stdio";
+
+  if (mode === "http") {
+    const { startHttpTransport } = await import("./transports/http.js");
+    const port = Number(process.env.PORT ?? 3000);
+    await startHttpTransport(server, port);
+    console.error(`📡  Connected to Spoolman at: ${SPOOLMAN_URL}`);
+    return;
+  }
+
+  if (mode !== "stdio") {
+    console.error(`❌  Unknown MCP_TRANSPORT="${mode}". Use "stdio" or "http".`);
+    process.exit(1);
+  }
+
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error("🧵  Spoolman MCP Server running on stdio");

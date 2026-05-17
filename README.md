@@ -99,6 +99,46 @@ The server is configured via **environment variables**:
 
 ---
 
+## 🌐 HTTP Transport (optional)
+
+By default the server uses **stdio** transport for direct integration with MCP
+clients (Claude Desktop, IDE plugins, etc.). For containerised or networked
+deployments, an optional HTTP transport is available.
+
+Enable it by setting `MCP_TRANSPORT=http`:
+
+| Variable | Default | Description |
+|---|---|---|
+| `MCP_TRANSPORT` | `stdio` | Set to `http` to expose a JSON-RPC endpoint. |
+| `PORT` | `3000` | TCP port for the HTTP listener. |
+
+The endpoint is served at `POST /mcp` in stateless mode (one transport
+instance per request, no session management). `GET` and `DELETE` on `/mcp`
+return `405 Method Not Allowed`. There is no built-in authentication — front
+it with a reverse proxy or restrict it to a private Docker network if
+exposed.
+
+### Docker (GHCR)
+
+Pre-built images are published to `ghcr.io/fauteck/spoolman-mcp` via the
+manually-triggered **Build Docker Image** workflow.
+
+Minimal `docker compose` snippet:
+
+```yaml
+services:
+  spoolman-mcp:
+    image: ghcr.io/fauteck/spoolman-mcp:latest
+    environment:
+      SPOOLMAN_URL: http://spoolman:7912
+      MCP_TRANSPORT: http
+      PORT: "3000"
+    ports:
+      - "3000:3000"
+```
+
+---
+
 ## 🛠️ Available MCP Tools
 
 ### 🏭 Vendors
