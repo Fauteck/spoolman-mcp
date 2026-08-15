@@ -8,6 +8,19 @@
 
 > **A [Model Context Protocol](https://modelcontextprotocol.io/) server for [Spoolman](https://github.com/Donkie/Spoolman) — manage your entire 3D printer filament inventory through natural language with Claude and other AI assistants!** 🎉
 
+<p align="center">
+  <a href="https://subthiel.eu">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/subthiel-logo-dark-bg.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/subthiel-logo-light-bg.svg">
+      <img src="assets/subthiel-logo-light-bg.svg" alt="Subthiel" height="40">
+    </picture>
+  </a>
+</p>
+<p align="center">
+  Sponsored by <a href="https://subthiel.eu">Subthiel</a> — 3D-Druck &amp; Softwareentwicklung. Check out the <a href="https://shop.subthiel.eu">shop</a> for prints, filament, and maker gear.
+</p>
+
 ---
 
 ## 🚀 What is this?
@@ -293,3 +306,15 @@ Check out these other projects from the Spoolman ecosystem:
 ---
 
 <p align="center">Made with ❤️ for the 3D printing community</p>
+
+<p align="center">
+  <a href="https://subthiel.eu">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/subthiel-logo-dark-bg.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/subthiel-logo-light-bg.svg">
+      <img src="assets/subthiel-logo-light-bg.svg" alt="Subthiel" height="32">
+    </picture>
+  </a>
+  <br>
+  Built with ❤️ and support from <a href="https://subthiel.eu">Subthiel</a> — 3D-Druck &amp; Softwareentwicklung · <a href="https://shop.subthiel.eu">Shop besuchen</a>
+</p>
