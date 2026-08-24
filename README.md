@@ -8,6 +8,19 @@
 
 > **A [Model Context Protocol](https://modelcontextprotocol.io/) server for [Spoolman](https://github.com/Donkie/Spoolman) — manage your entire 3D printer filament inventory through natural language with Claude and other AI assistants!** 🎉
 
+<p align="center">
+  <a href="https://subthiel.eu">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/subthiel-logo-dark-bg.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/subthiel-logo-light-bg.svg">
+      <img src="assets/subthiel-logo-light-bg.svg" alt="Subthiel" height="40">
+    </picture>
+  </a>
+</p>
+<p align="center">
+  This project grew out of <a href="https://subthiel.eu">Subthiel</a>, my own company for 3D printing &amp; software development.
+</p>
+
 ---
 
 ## 🚀 What is this?
@@ -333,3 +346,15 @@ Check out these other projects from the Spoolman ecosystem:
 ---
 
 <p align="center">Made with ❤️ for the 3D printing community</p>
+
+<p align="center">
+  <a href="https://subthiel.eu">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/subthiel-logo-dark-bg.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/subthiel-logo-light-bg.svg">
+      <img src="assets/subthiel-logo-light-bg.svg" alt="Subthiel" height="32">
+    </picture>
+  </a>
+  <br>
+  Made by me at <a href="https://subthiel.eu">Subthiel</a> — my company for 3D printing &amp; software development
+</p>
