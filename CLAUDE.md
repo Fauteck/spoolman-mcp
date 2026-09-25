@@ -71,10 +71,16 @@ Die übrigen Fauteck-Repos halten „kein SemVer, keine Git-Tags, Container-Tags
 
 - Dies ist ein **npm-Paket**, kein Dienst. Ein npm-Paket ohne Version ist nicht
   installierbar; SemVer ist hier die Schnittstelle, nicht Zierrat.
-- `.github/workflows/release.yml` läuft auf **Push nach `main`** und ruft
-  `semantic-release`. Die Version fällt aus den Commit-Präfixen
-  (`feat` → minor, `fix`/`perf`/`refactor` → patch, `docs`/`style`/`chore` → kein
-  Release). Commit-Nachrichten sind hier also wirksam, nicht nur beschreibend.
+- `.github/workflows/release.yml` ist auf **Push nach `main`** konfiguriert und
+  ruft `semantic-release`. Nach dessen Regeln fällt die Version aus den
+  Commit-Präfixen (`feat` → minor, `fix`/`perf`/`refactor` → patch,
+  `docs`/`style`/`chore` → kein Release).
+- **Konfiguriert, im Fork bisher ohne Release** (Stand 2026-09-25): Das Repo hat
+  keinen einzigen Tag, und `package.json` steht unverändert auf
+  `@disane-dev/spoolman-mcp` in Version `0.0.1` — Scope und Version des Upstream.
+  Ob `release.yml` hier je gelaufen ist und woran es gegebenenfalls scheitert,
+  ist nicht geprüft. „Commit-Präfixe erzeugen eine Version" ist also die
+  Absicht des Workflows, keine beobachtete Praxis.
 - `.github/workflows/build.yml` baut das Container-Image und läuft **nur** auf
   `workflow_dispatch`.
 
